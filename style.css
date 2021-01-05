@@ -1,0 +1,312 @@
+@font-face {
+    font-family: ProductSans;
+    src: url(Fonts/ProductSansRegular.ttf)
+}
+
+/*This is for inserting custom fonts downloaded and stored in the system*/
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*font-family: "DM Sans", sans-serif;*/
+    font-size: 14px;
+}
+/*Default Settings for all the tags in the HTML document.
+This is to tell the browser that we will give all the formatting options for the webpage and it need not do anything*/
+
+@media (min-width: 900px) {
+    * {
+        font-size: 16px;
+    }
+}
+
+.margin-auto {
+    margin-right: auto;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: #555;
+}
+
+a:hover {
+    color: black;
+}
+
+header {
+    background: white;
+    box-shadow: 0 0 4px 4px #eee;
+    /*The attributes below are used for fixing the header to the top of thepage*/
+    width: 100%;
+    position: fixed;
+}
+
+.clear {
+    /*This clear class for the div is used to simply leave empty space, inorder to avoid the overlap between get mode done with gmail section and header. To avoid confusion, remove this clear class or remove the position fixed from the header component and check the page*/
+    height: 112px;
+}
+
+.header-mobile nav {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    padding: 0 2.7%;
+    border-bottom: 1px solid #ddd;
+    font-family: ProductSans;
+}
+
+.header-desktop nav {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    padding: 0 2.7%;
+    border-bottom: 1px solid #ddd;
+    font-family: ProductSans;
+}
+
+header img {
+    height: 34px;
+}
+
+.btn {
+    color: white;
+    background: #1a73e8;
+    padding: 0 24px;
+    font-size: 14px;
+    line-height: 36px;
+    border-radius: 3px;
+    letter-spacing: 0.75px;
+    font-weight: 500;
+}
+
+.btn:hover {
+    color: white;
+    background: #174ea6;
+}
+
+.gmail-logo-text {
+    font-size: 26px;
+    color: #666;
+    margin-left: 8px;
+    font-weight: 550;
+}
+
+
+/*
+footer > * {
+    margin: 32px 16px;
+}  
+
+Common margin for everything which comes under the footer*/
+
+footer {
+    padding: 32px 16px;
+    background-color: #f8f8f8;
+}
+
+footer img {
+    height: 40px;
+}
+
+footer nav {
+    margin: 32px 0;
+    font-family: Arial;
+}  
+
+footer ul {
+    display: flex;  /*flex option arranges everything in the html component from left to right */
+    list-style: none;
+}
+
+footer li {
+    margin-right: 16px;
+}
+
+footer select {
+    color:  #555;
+    margin-left: 16px;
+    border: none; /*This is because by default the select box has black borders*/
+    background-color: #f8f8f8;
+    padding: 10px;
+    width: 320px;
+    
+}
+
+.help-icon {
+    color: white;
+    font-weight: 600;
+    background: black;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 99px;
+    margin-right: 8px;
+}
+
+/*Sections*/
+
+section {
+    font-family: ProductSans;
+    padding: 24px;
+    /*The attributes below are responsible for the content in the section component to be center and arranged*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1, h2 {
+    text-align: center;
+    font-size: 35px;
+    color: #222;
+    font-weight: 590;
+    margin: 32px 0;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 42px;
+    letter-spacing: 1px;
+}
+
+p  {
+    text-align: center;
+    
+}
+
+.hero-section {
+    background: #f8f8f8;
+}
+
+.stay-organized-section, .never-drop-ball-section, .avoid-suspicious-emails-section {
+    margin: 18px 40px;
+    background: #f8f8f8;
+}
+
+.get-gmail-section {
+    margin: 40px;
+}
+
+.get-gmail-section img {
+    height: 72px;
+}
+
+.get-gmail-section .btn {
+    line-height: 48px;;
+}
+
+.experience-gmail-section img {
+    height: 48px;
+    margin-top: 40px;
+}
+
+.devices-section img{
+    width: 100%;
+}
+
+/*Responsive Web Design*/
+
+.hero-section-desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 8% 72px;
+    background: #f8f8f8;
+}
+
+.hero-section-desktop img {
+    width: 125%;
+}
+
+.hero-section-desktop h1 {
+    text-align: left;
+    font-size: 52px;
+    font-weight: 580;
+    line-height: 1.25;
+    margin-bottom: 30px;
+}
+
+.hero-section-desktop p {
+    text-align: left;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.hero-section-desktop .btn {
+    text-align: left;
+    font-size: 16px;
+    line-height: 40px;
+}
+
+.mobile-only {
+    
+}
+
+.desktop-only {
+    display: none;
+}
+
+.header-desktop {
+    height: 64px;
+}
+
+.header-desktop a {
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+.header-desktop .btn {
+    line-height: 48px;
+}
+
+@media (min-width: 800px) {
+
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 42px;
+        font-weight: 600px;
+    }
+
+    .mobile-only {
+        display: none;
+    }
+    
+    .desktop-only {
+        display: block;
+    }
+
+    .hero-section-desktop {
+        display: grid;
+    }
+
+    .take-action-section-desktop {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 5%;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+    .take-action-section-desktop img{
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+    section p, section h2 {
+        text-align: left;
+    }
+
+    section h2 {
+        font-size: 48px;
+    }
+
+}
+
+img {
+    max-width: 100%;
+}
